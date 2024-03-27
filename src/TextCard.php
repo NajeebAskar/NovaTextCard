@@ -125,12 +125,8 @@ class TextCard extends Card
         return $this->withMeta(['forceFullWidth' => true, 'width' => '5/6']);
     }
 
-    /**
-     * Prepare the element for JSON serialization.
-     *
-     * @return array
-     */
-    public function jsonSerialize()
+    
+    public function jsonSerialize():array
     {
         return array_merge([
             'name'  => Str::random(16),
